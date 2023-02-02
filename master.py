@@ -1,14 +1,21 @@
 # This is a sample Python scrip
-# c'est un projet qui vas nous permettre
+# c'est un projet d'aplication avec python qui permet au entreprise d'avoir des reporting sur leur données sans une réél maitrise de l'informatique
 
+#l'iddée est ici de créé un outil similaire a pawer bi mais plus simple a²vec plus de données
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import turtle
+turtle.title('Sixteen Petals Flower')
+turtle.setworldcoordinates(-2000,-2000,2000,2000)
 
+def draw_flower(x,y,tilt,radius):
+    turtle.up()
+    turtle.goto(x,y)
+    turtle.down()
+    turtle.seth(tilt-45)
+    turtle.circle(radius,90)
+    turtle.left(90)
+    turtle.circle(radius,90)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
+for tilt in range(0,360,30):
+    draw_flower(0,0,tilt,1000)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
